@@ -1,190 +1,188 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <!--Custom CSS-->
+        <link rel='stylesheet' href='css/vehicles.css'>
 
-<head>
-    <!--Custom CSS-->
-    <link rel='stylesheet' href='css/vehicles.css'>
+        <!--Boostrap CSS-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <!--Boostrap CSS-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <!-- JS, Popper.js, jQuery, and jQuery waypoint-->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' />
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
 
-    <!-- JS, Popper.js, jQuery, and jQuery waypoint-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js' />
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.5/waypoints.min.js"></script>
+        <!-- CountUp.js -->
+        <script src='js/countUp.js'></script>
+    </head>
 
-    <!-- CountUp.js -->
-    <script src='js/countUp.js'></script>
-</head>
+    <body>
+        <div class='container-fluid p-2'>
+            <ul class="nav justify-content-center nav-tabs nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Vehicles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Updates</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Media</a>
+                </li>
+            </ul>
 
-<body>
-    <div class='container-fluid p-2'>
-        <ul class="nav justify-content-center nav-tabs nav-fill">
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" href="#">Vehicles</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Updates</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Media</a>
-            </li>
-        </ul>
-
-        <h1 class='text-center display-1'>Launch Vehicles</h1>
-        <div class='content px-5'>
-            <div id='ζ'>
-                <h3 class='display-3 text-center'>ζ</h3>
-                <h1 class='text-center'>ζ is a small, low-powered model rocket with a flight computer, data recorder and telemetry unit</h1>
-                <br>
-                <h2 class='pt-3'>Program Goals:</h2>
-                <ul>
-                    <li>Build and fly a model rocket capable of reaching 1km in altitude AGL and returning safely</li>
-                    <li>Build and fly a flight computer capable of data recording, in-flight communication with ground control equipment and deploying a recovery system</li>
-                    <li>Build and fly a low-impulse, Ammonium Nitrate-based soild rocket motor</li>
-                </ul>
-                <h2 class='pt-3 pb-5'>The Vehicle:</h2>
-                <div class='row'>
-                    <div class='col-3'>
-                        <img src='img/zetamodel.png' class='img-center'>
-                    </div>
-
-                    <div class='col-9'>
-                        <div id='nosecone'>
-                            <h3>Nosecone Assembly:</h3>
-                            <ul>
-                                <li>
-                                    <h4>
-                                        A small hole near the top of the nosecone assembly, which is not visible on the image, equalizes the internal pressure to that of the atmosphere around it on ascent to keep the nosecone assembly from separating prematurely.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The recovery system, located in the nosecone assembly and highlighted in red, is a parachute triggered by a pyrotechnic mechanism which increases the air pressure in the nosecone compared to the outside ambient pressure, which causes it to separate from
-                                        the main housing of the vehicle, releasing the parachute and ensuring a safe touchdown and recovery. It is connected to the vehicle with a shock cord.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>The nosecone assembly is designed to be as aerodynamic as possible, ensuring vehicle stability on ascent and the highest possible apogee.</h4>
-                                </li>
-                            </ul>
+            <h1 class='text-center display-1'>Launch Vehicles</h1>
+            <div class='content px-5'>
+                <div id='ζ'>
+                    <h3 class='display-3 text-center'>ζ</h3>
+                    <h1 class='text-center'>ζ is a small, low-powered model rocket with a flight computer, data recorder and telemetry unit</h1>
+                    <br>
+                    <h2 class='pt-3'>Program Goals:</h2>
+                    <ul>
+                        <li>Build and fly a model rocket capable of reaching 1km in altitude AGL and returning safely</li>
+                        <li>Build and fly a flight computer capable of data recording, in-flight communication with ground control equipment and deploying a recovery system</li>
+                        <li>Build and fly a low-impulse, Ammonium Nitrate-based soild rocket motor</li>
+                    </ul>
+                    <h2 class='pt-3 pb-5'>The Vehicle:</h2>
+                    <div class='row'>
+                        <div class='col-3'>
+                            <img src='img/zetamodel.png' class='img-center'>
                         </div>
 
-                        <div id='flightComputer'>
-                            <h3>Flight Computer:</h3>
-                            <ul>
-                                <li>
-                                    <h4>
-                                        The flight data recorder records data using the barometric altimeter and inertial measurement unit, consisting of multiple gyroscopes, accelerometers, and magnetometers to determine the altitude, velocity, acceleration and heading of the vehicle at any
-                                        point in flight.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The telemetry unit, which doubles as the control unit for the flight computer relays the data being recorded on the computer to ground control equipment for monitoring and data analysis in case of an in-flight anomaly. The telemetry unit also waits for
-                                        an optimal velocity and altitude to deploy the recovery system. The software running on the control unit uses state-detection to ensure that it is performing the correct actions at the correct points in flight.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The recovery system deployment circuit consists of a high-current field-effect transistor, which triggers a pyrotechnic charge to release enough pressure in the nosecone to separate it from the main vehicle, releasing the parachute.
-                                    </h4>
-                                </li>
-                            </ul>
-                        </div>
+                        <div class='col-9'>
+                            <div id='nosecone'>
+                                <h3>Nosecone Assembly:</h3>
+                                <ul>
+                                    <li>
+                                        <h4>
+                                            A small hole near the top of the nosecone assembly, which is not visible on the image, equalizes the internal pressure to that of the atmosphere around it on ascent to keep the nosecone assembly from separating prematurely.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The recovery system, located in the nosecone assembly and highlighted in red, is a parachute triggered by a pyrotechnic mechanism which increases the air pressure in the nosecone compared to the outside ambient pressure, which causes it to separate from
+                                            the main housing of the vehicle, releasing the parachute and ensuring a safe touchdown and recovery. It is connected to the vehicle with a shock cord.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>The nosecone assembly is designed to be as aerodynamic as possible, ensuring vehicle stability on ascent and the highest possible apogee.</h4>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div id='solidRocketMotor'>
-                            <h3>Solid Rocket Motor:</h3>
-                            <ul>
-                                <li>
-                                    <h4>
-                                        The solid rocket motor is a small-impulse motor, with an Ammonium-Nitrate and Aluminum propellant mixture. The propellant grain is cylindrical, 240mm tall and 38mm wide.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The motor is a core-burner, with a circular bore in the BATES configuration, which results in a progressive-regressive thrust curve. This means that the vehicle's thrust will peak in the middle of it's burn, and the highest dynamic forces will be experienced
-                                        towards the middle of the burn.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The motor casing is an aluminum casing, manufactured by Aerotech and designed to be recovered and reused on multiple flights.
-                                    </h4>
-                                </li>
-                            </ul>
-                        </div>
+                            <div id='flightComputer'>
+                                <h3>Flight Computer:</h3>
+                                <ul>
+                                    <li>
+                                        <h4>
+                                            The flight data recorder records data using the barometric altimeter and inertial measurement unit, consisting of multiple gyroscopes, accelerometers, and magnetometers to determine the altitude, velocity, acceleration and heading of the vehicle at any
+                                            point in flight.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The telemetry unit, which doubles as the control unit for the flight computer relays the data being recorded on the computer to ground control equipment for monitoring and data analysis in case of an in-flight anomaly. The telemetry unit also waits for
+                                            an optimal velocity and altitude to deploy the recovery system. The software running on the control unit uses state-detection to ensure that it is performing the correct actions at the correct points in flight.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The recovery system deployment circuit consists of a high-current field-effect transistor, which triggers a pyrotechnic charge to release enough pressure in the nosecone to separate it from the main vehicle, releasing the parachute.
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div id='aeroSurface'>
-                            <h3>Aerodynamic Surfaces:</h3>
-                            <ul>
-                                <li>
-                                    <h4>
-                                        The primary function of the aerodynamic surfaces is to ensure that the center of lift is closer to the rear of the vehicle than the center of mass, ensuring vehicle stability on ascent.
-                                    </h4>
-                                </li>
-                                <li>
-                                    <h4>
-                                        The aerodynamic surfaces are 0.1mm thick, trapezoidal and optimized for the least possible amount of drag while still keeping the vehicle stable.
-                                    </h4>
-                                </li>
-                            </ul>
-                        </div>
+                            <div id='solidRocketMotor'>
+                                <h3>Solid Rocket Motor:</h3>
+                                <ul>
+                                    <li>
+                                        <h4>
+                                            The solid rocket motor is a small-impulse motor, with an Ammonium-Nitrate and Aluminum propellant mixture. The propellant grain is cylindrical, 240mm tall and 38mm wide.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The motor is a core-burner, with a circular bore in the BATES configuration, which results in a progressive-regressive thrust curve. This means that the vehicle's thrust will peak in the middle of it's burn, and the highest dynamic forces will be experienced
+                                            towards the middle of the burn.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The motor casing is an aluminum casing, manufactured by Aerotech and designed to be recovered and reused on multiple flights.
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div class='row py-3' id='flightPredictions'>
-                            <div class='col-sm text-center'>
-                                <h3>Expected Apogee</h3>
-                                <div>
-                                    <h4 id='alt' class='display-4'>0</h4>
-                                    <h4 class='text-muted'>meters</h4>
+                            <div id='aeroSurface'>
+                                <h3>Aerodynamic Surfaces:</h3>
+                                <ul>
+                                    <li>
+                                        <h4>
+                                            The primary function of the aerodynamic surfaces is to ensure that the center of lift is closer to the rear of the vehicle than the center of mass, ensuring vehicle stability on ascent.
+                                        </h4>
+                                    </li>
+                                    <li>
+                                        <h4>
+                                            The aerodynamic surfaces are 0.1mm thick, trapezoidal and optimized for the least possible amount of drag while still keeping the vehicle stable.
+                                        </h4>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class='row py-3' id='flightPredictions'>
+                                <div class='col-sm text-center'>
+                                    <h3>Expected Apogee</h3>
+                                    <div>
+                                        <h4 id='alt' class='display-4'>0</h4>
+                                        <h4 class='text-muted'>meters</h4>
+                                    </div>
+                                </div>
+                                <div class='col-sm text-center'>
+                                    <h3>Expected Velocity at Burnout</h3>
+                                    <div>
+                                        <h4 id='vel' class='display-4'>0</h4>
+                                        <h4 class='text-muted'>meters per second</h4>
+                                    </div>
                                 </div>
                             </div>
-                            <div class='col-sm text-center'>
-                                <h3>Expected Velocity at Burnout</h3>
-                                <div>
-                                    <h4 id='vel' class='display-4'>0</h4>
-                                    <h4 class='text-muted'>meters per second</h4>
-                                </div>
-                            </div>
+
+
+                            <!--Counter Script-->
+                            <script src='js/count.js'></script>
                         </div>
-
-
-                        <!--Counter Script-->
-                        <script src='js/count.js'></script>
                     </div>
+                    <h2 class='py-3'>Progress:</h2>
+                    <div id='ζ-progress' class='my-3'>
+                        <div id='ζ-progressBar' role="progressbar"></div>
+                    </div>
+                    <h4 class='display-4 text-center'>ζ is 45% Complete</h4>
+                    <h3>Next Steps:</h3>
+                    <ul>
+                        <li>
+                            <h4>
+                                Complete Solid Rocket Motor internal ballistics simulations and chemical design
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Accquire Solid Rocket Motor chemical hardware
+                            </h4>
+                        </li>
+                        <li>
+                            <h4>
+                                Fabricate Solid Rocket Motor
+                            </h4>
+                        </li>
+                    </ul>
                 </div>
-                <h2 class='py-3'>Progress:</h2>
-                <div id='ζ-progress' class='my-3'>
-                    <div id='ζ-progressBar' role="progressbar"></div>
-                </div>
-                <h4 class='display-4 text-center'>ζ is 45% Complete</h4>
-                <h3>Next Steps:</h3>
-                <ul>
-                    <li>
-                        <h4>
-                            Complete Solid Rocket Motor internal ballistics simulations and chemical design
-                        </h4>
-                    </li>
-                    <li>
-                        <h4>
-                            Accquire Solid Rocket Motor chemical hardware
-                        </h4>
-                    </li>
-                    <li>
-                        <h4>
-                            Fabricate Solid Rocket Motor
-                        </h4>
-                    </li>
-                </ul>
             </div>
+
         </div>
-
-    </div>
-</body>
-
+    </body>
 </html>

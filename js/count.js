@@ -1,10 +1,10 @@
-$.fn.isOnScreen = function(){
+$.fn.isOnScreen = function() {
 
     var win = $(window);
 
     var viewport = {
-        top : win.scrollTop(),
-        left : win.scrollLeft()
+        top: win.scrollTop(),
+        left: win.scrollLeft()
     };
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
@@ -18,14 +18,15 @@ $.fn.isOnScreen = function(){
 };
 
 window.addEventListener('scroll', count);
+window.addEventListener('scroll', animateProgressBar);
 
-function count(){
+function count() {
     var element = document.querySelector('#flightPredictions');
     var position = element.getBoundingClientRect();
-    
-	//checking for partial visibility
-	if(position.top < window.innerHeight && position.bottom >= 0) {
-		let c = new CountUp('alt', 0, 1200, 0, 3);
+
+    //checking for partial visibility
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+        let c = new CountUp('alt', 0, 1200, 0, 3);
         if (!c.error)
             c.start();
         else
@@ -36,7 +37,24 @@ function count(){
             d.start();
         else
             console.error(d.error);
-        
+
         window.removeEventListener('scroll', count);
-	}
+    }
+}
+
+function animateProgressBar() {
+    var element = document.querySelector('#ζ-progress');
+    var position = element.getBoundingClientRect();
+
+    //checking for partial visibility
+    if (position.top < window.innerHeight && position.bottom >= 0) {
+        $("#ζ-progressBar").animate({
+            width: "45%",
+        }, {
+            duration: 2000,
+            easing: 'swing'
+        });
+
+        window.removeEventListener('scroll', animateProgressBar);
+    }
 }

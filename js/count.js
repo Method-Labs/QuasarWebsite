@@ -1,16 +1,31 @@
-function isInView(elem) {
-    var docViewTop = $(window).scrollTop();
-    var docViewBottom = docViewTop + $(window).height();
+$.fn.isOnScreen = function(){
 
-    var elemTop = $(elem).offset().top;
-    var elemBottom = elemTop + $(elem).height();
+    var win = $(window);
 
-    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-}
+    var viewport = {
+        top : win.scrollTop(),
+        left : win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
 
-$(window).on("scroll", function(){
-    if($(window).scrollTop() >= $('#vel').offset().top/2 - 10){
-        let c = new CountUp('alt', 0, 1200, 0, 3);
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+};
+
+window.addEventListener('scroll', count);
+
+function count(){
+    var element = document.querySelector('#flightPredictions');
+    var position = element.getBoundingClientRect();
+    
+	//checking for partial visibility
+	if(position.top < window.innerHeight && position.bottom >= 0) {
+		let c = new CountUp('alt', 0, 1200, 0, 3);
         if (!c.error)
             c.start();
         else
@@ -21,6 +36,7 @@ $(window).on("scroll", function(){
             d.start();
         else
             console.error(d.error);
-        $(window).off("scroll");
-    }
-});
+        
+        window.removeEventListener('scroll', count);
+	}
+}

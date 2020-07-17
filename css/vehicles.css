@@ -2,4 +2,29 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-  }
+}
+
+#nosecone {
+  position: absolute;
+  top:20vh;
+}
+
+#flightComputer{
+  position: absolute;
+  top:50vh;
+}
+
+#solidRocketMotor{
+  position: absolute;
+  top:80vh;
+}
+
+#aeroSurface{
+  position: absolute;
+  top:120vh;
+}
+
+#flightPredictions{
+  position: relative;
+  top: 140vh;
+}

@@ -11,22 +11,22 @@
 
 #flightComputer {
     position: absolute;
-    top: 50vh;
+    top: 70vh;
 }
 
 #solidRocketMotor {
     position: absolute;
-    top: 80vh;
+    top: 120vh;
 }
 
 #aeroSurface {
     position: absolute;
-    top: 120vh;
+    top: 200vh;
 }
 
 #flightPredictions {
     position: relative;
-    top: 140vh;
+    top: 220vh;
 }
 
 #ζ-progress {

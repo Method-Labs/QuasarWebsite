@@ -26,13 +26,13 @@ function count() {
 
     //checking for partial visibility
     if (position.top < window.innerHeight && position.bottom >= 0) {
-        let c = new CountUp('alt', 0, 1200, 0, 3);
+        let c = new CountUp('alt', 0, 1500, 0, 3);
         if (!c.error)
             c.start();
         else
             console.error(c.error);
 
-        let d = new CountUp('vel', 0, 343, 0, 3);
+        let d = new CountUp('vel', 0, 400, 0, 3);
         if (!d.error)
             d.start();
         else
@@ -54,6 +54,12 @@ function animateProgressBar() {
             duration: 2000,
             easing: 'swing'
         });
+
+        let d = new CountUp('ζ-progressNumber', 0, 45, 0, 2);
+        if (!d.error)
+            d.start();
+        else
+            console.error(d.error);
 
         window.removeEventListener('scroll', animateProgressBar);
     }
